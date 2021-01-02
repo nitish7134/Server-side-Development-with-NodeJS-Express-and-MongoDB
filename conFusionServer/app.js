@@ -15,7 +15,7 @@ var leaderRouter = require('./routes/leaderRouter');
 
 const Dishes = require('./models/dishes');
 
-const url = 'mongodb://localhost:27017/conFusion';
+const url = 'mongodb://localhost:27017/conFussion';
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
