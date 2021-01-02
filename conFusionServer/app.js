@@ -7,6 +7,7 @@ var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 
 const mongoose = require('mongoose');
+var config = require('./config');
 
 var passport = require('passport');
 var authenticate = require('./authenticate');
@@ -18,8 +19,8 @@ var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 
 const Dishes = require('./models/dishes');
+const url = config.mongoUrl;
 
-const url = 'mongodb://localhost:27017/conFussion';
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
